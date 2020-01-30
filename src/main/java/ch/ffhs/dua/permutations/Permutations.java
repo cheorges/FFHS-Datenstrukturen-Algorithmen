@@ -28,11 +28,11 @@ public class Permutations {
       if (start == numbers.length - 1) {
          result[listIndex++] = listCopy(numbers);
       } else {
-          for (int index = start; index < numbers.length; index++) {
-              swapNumbers(numbers, index, start);
-              startPermutation(start + 1, numbers);
-              swapNumbers(numbers, index, start);
-          }
+         for (int index = start; index < numbers.length; index++) {
+            swapNumbers(numbers, index, start);
+            startPermutation(start + 1, numbers);
+            swapNumbers(numbers, index, start);
+         }
       }
    }
 

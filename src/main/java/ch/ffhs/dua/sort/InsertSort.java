@@ -7,9 +7,10 @@ public class InsertSort {
     * @param array Das zu sortierende Array.
     */
    public static void sort(int[] array) {
-       if (array.length < 1) return;
-       
-       sort(array, 0, array.length - 1);
+      if (array.length < 1)
+         return;
+
+      sort(array, 0, array.length - 1);
    }
 
    /**
@@ -21,18 +22,18 @@ public class InsertSort {
     * @param end   Index des letzten Elementes des Teils, das sortiert werden muss.
     */
    public static void sort(int[] array, int start, int end) {
-       for (int index = start + 1; index <= end; index++) {
-           int currentValue = array[index];
-           int previous = index - 1;
+      for (int index = start + 1; index <= end; index++) {
+         int currentValue = array[index];
+         int previous = index - 1;
 
-           // Verschiebe previous Element um eine Stelle nach rechts, solange es grösser als das aktuelle Element ist.
-           while (previous >= start && array[previous] > currentValue) {
-               array[previous + 1] = array[previous];
-               previous--;
-           }
+         // Verschiebe previous Element um eine Stelle nach rechts, solange es grösser als das aktuelle Element ist.
+         while (previous >= start && array[previous] > currentValue) {
+            array[previous + 1] = array[previous];
+            previous--;
+         }
 
-           array[previous + 1] = currentValue;
-       }
+         array[previous + 1] = currentValue;
+      }
    }
 
 }

@@ -3,8 +3,9 @@ package ch.ffhs.dua.binSearch;
 
 public class BinSearch {
 
-    public static final int NOT_EXIST = -1;
-    /**
+   public static final int NOT_EXIST = -1;
+
+   /**
     * Findet für einen aufsteigend geordneten Array zu einer Zahl value
     * den kleinsten und den grössten Index.
     *

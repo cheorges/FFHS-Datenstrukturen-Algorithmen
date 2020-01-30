@@ -8,32 +8,36 @@ package ch.ffhs.dua.tree;
  */
 public abstract class DepthFirstTraverserRec<N> {
 
-	/**
-	 * Traversiert einen Baum mit DepthFirst Strategie.
-	 * @param node Die Wurzel des zu traversierenden Baumes.
-	 */
-	public void traverse(TreeNode<N> node) {
-		if(node == null) return;
+   /**
+    * Traversiert einen Baum mit DepthFirst Strategie.
+    *
+    * @param node Die Wurzel des zu traversierenden Baumes.
+    */
+   public void traverse(TreeNode<N> node) {
+      if (node == null)
+         return;
 
-		preOperation(node.value());
+      preOperation(node.value());
 
-		for(int index = 0; index < node.children().size(); index++) {
-			traverse(node.children().get(index));
-		}
+      for (int index = 0; index < node.children().size(); index++) {
+         traverse(node.children().get(index));
+      }
 
-		postOperation(node.value());
-	}
-	
-	/**
-	 * Operation auf einem Knoten, bevor die Nachkommen besucht wurden.
-	 * @param value
-	 */
-	abstract protected void preOperation(N value);   
-    
-	/**
-	 * Operation auf einem Knoten, nachdem die Nachkommen besucht wurden.
-	 * @param value
-	 */
-	abstract protected void postOperation(N value);  
+      postOperation(node.value());
+   }
+
+   /**
+    * Operation auf einem Knoten, bevor die Nachkommen besucht wurden.
+    *
+    * @param value
+    */
+   abstract protected void preOperation(N value);
+
+   /**
+    * Operation auf einem Knoten, nachdem die Nachkommen besucht wurden.
+    *
+    * @param value
+    */
+   abstract protected void postOperation(N value);
 
 }   
