@@ -1,1 +1,3 @@
-# Datenstrukturen-Algorithmen | FFHS
+# Datenstrukturen-Algorithmen
+
+> FFHS
